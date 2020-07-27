@@ -8,6 +8,7 @@ import Footer from './FooterComponent';
 import {COMMENTS} from '../shared/comments';
 import {LEADERS} from '../shared/leaders';
 import {PROMOTIONS} from '../shared/promotions';
+import About from './AboutComponent';
 import { DISHES } from '../shared/dishes';
 import {Switch, Route, Redirect} from 'react-router-dom';
 
@@ -33,7 +34,8 @@ const HomePage = () =>  {
       leader={this.state.leaders.filter((leader) => leader.featured)[0]}
     />
   );
-}
+  }
+
   const DishWithId = ({match}) => {
     return(
       <DishDetail dish={this.state.dishes.filter((dish) => dish.id ===
@@ -49,6 +51,7 @@ return (
       <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
+          <Route exact path="/aboutus" component={ () => <About leaders = {this.state.leaders}/>} />
           <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />}/>
           <Route path="/menu/:dishId" component={DishWithId} />
           <Route exact path="/contactus" component={Contact} />
