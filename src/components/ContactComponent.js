@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Breadcrumb, BreadcrumbItem, Button,
-  FormGroup, Label, Col, Row} from 'reactstrap';
+   Label, Col, Row} from 'reactstrap';
 import {Link} from 'react-router-dom';
-import {Control, Form, Errors, actions} from 'react-redux-form';
+import {Control, Form} from 'react-redux-form';
 
 class Contact extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class Contact extends Component {
                 <div className="col-12 col-sm-11 offset-sm-1">
                     <div className="btn-group" role="group">
                         <a role="button" className="btn btn-primary" href="tel:+85212345678"><i className="fa fa-phone"></i> Call</a>
-                        <a role="button" className="btn btn-info"><i className="fa fa-skype"></i> Skype</a>
+                        <a role="button" className="btn btn-info" href="/#"><i className="fa fa-skype"></i> Skype</a>
                         <a role="button" className="btn btn-success" href="mailto:confusion@food.net"><i className="fa fa-envelope-o"></i> Email</a>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ class Contact extends Component {
                         <Button type="submit" color="primary">
                             Send Feedback
                         </Button>
-                        
+
                         </Col>
                     </Row>
                   </Form>
